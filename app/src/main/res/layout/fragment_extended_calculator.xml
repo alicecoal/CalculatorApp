@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".extended_calculator">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/sinBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="sinBTN"
+            android:text="@string/trigSinText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/cosBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="cosBTN"
+            android:text="@string/trigCosText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/sinBTN"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/tanBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="tanBTN"
+            android:text="@string/trigTanText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/cosBTN"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/arcsinBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="arcsinBTN"
+            android:text="@string/trigArcSinText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sinBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/arccosBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="arccosBTN"
+            android:text="@string/trigArcCosText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/arcsinBTN"
+            app:layout_constraintTop_toBottomOf="@+id/cosBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/arctanBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="arctanBTN"
+            android:text="@string/trigArcTanText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/arccosBTN"
+            app:layout_constraintTop_toBottomOf="@+id/tanBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/lnBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="lnBTN"
+            android:text="@string/naturalLogText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/arcsinBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/lgBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="logBTN"
+            android:text="@string/LogText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/lnBTN"
+            app:layout_constraintTop_toBottomOf="@+id/arccosBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/squareRootBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="squareRootBTN"
+            android:text="@string/squareRootText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/lgBTN"
+            app:layout_constraintTop_toBottomOf="@+id/arctanBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/absolutValueBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="absolutValueBTN"
+            android:text="@string/absoluteValueText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lnBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/xSquaredBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="xSquaredBTN"
+            android:text="@string/xSquaredText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/absolutValueBTN"
+            app:layout_constraintTop_toBottomOf="@+id/lgBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/xPowerYBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="xPowerYBTN"
+            android:text="@string/xPowerYText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/xSquaredBTN"
+            app:layout_constraintTop_toBottomOf="@+id/squareRootBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/radBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="radBTN"
+            android:text="@string/radXText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/absolutValueBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/piBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="piBTN"
+            android:text="@string/piText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/radBTN"
+            app:layout_constraintTop_toBottomOf="@+id/xSquaredBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/eBTN"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signs"
+            android:onClick="eBTN"
+            android:text="@string/eText"
+            android:textAllCaps="false"
+            android:textColor="@color/blackStart"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/piBTN"
+            app:layout_constraintTop_toBottomOf="@+id/xPowerYBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

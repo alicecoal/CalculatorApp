@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".simple_calculator">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/subtractBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="72dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_maths"
+            android:onClick="subtractBTN"
+            android:text="@string/subtract"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/equalsBTN"
+            app:layout_constraintTop_toBottomOf="@+id/addBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/addBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_maths"
+            android:onClick="addBTN"
+            android:text="@string/add"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/threeBTN"
+            app:layout_constraintTop_toBottomOf="@+id/multiplyBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/zeroBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="zeroBTN"
+            android:text="@string/zero"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/oneBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/eightBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="eightBTN"
+            android:text="@string/eight"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/sevenBTN"
+            app:layout_constraintTop_toBottomOf="@+id/parOpenBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/oneBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="oneBTN"
+            android:text="@string/one"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fourBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/nineBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="nineBTN"
+            android:text="@string/nine"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/eightBTN"
+            app:layout_constraintTop_toBottomOf="@+id/parCloseBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/multiplyBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_maths"
+            android:onClick="multiplyBTN"
+            android:text="@string/multiply"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/sixBTN"
+            app:layout_constraintTop_toBottomOf="@+id/divideBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/fourBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="fourBTN"
+            android:text="@string/four"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sevenBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/fiveBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="fiveBTN"
+            android:text="@string/five"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/fourBTN"
+            app:layout_constraintTop_toBottomOf="@+id/eightBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/twoBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="twoBTN"
+            android:text="@string/two"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/oneBTN"
+            app:layout_constraintTop_toBottomOf="@+id/fiveBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/divideBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_maths"
+            android:onClick="divideBTN"
+            android:text="@string/divide"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/nineBTN"
+            app:layout_constraintTop_toBottomOf="@+id/backspaceBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/threeBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="threeBTN"
+            android:text="@string/three"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/twoBTN"
+            app:layout_constraintTop_toBottomOf="@+id/sixBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/sevenBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="sevenBTN"
+            android:text="@string/seven"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clearBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/sixBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="sixBTN"
+            android:text="@string/six"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/fiveBTN"
+            app:layout_constraintTop_toBottomOf="@+id/nineBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/parCloseBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_signs"
+            android:onClick="parCloseBTN"
+            android:text="@string/parClose"
+            android:textColor="@color/blackStart"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/parOpenBTN"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/backspaceBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_signs"
+            android:onClick="backspaceBTN"
+            android:text="@string/backspace"
+            android:textColor="@color/blackStart"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/parCloseBTN"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/parOpenBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_signs"
+            android:onClick="parOpenBTN"
+            android:text="@string/parOpen"
+            android:textColor="@color/blackStart"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/clearBTN"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/equalsBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_maths"
+            android:onClick="equalsBTN"
+            android:text="@string/equals"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/pointBTN"
+            app:layout_constraintTop_toBottomOf="@+id/threeBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/clearBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_signs"
+            android:onClick="clearBTN"
+            android:text="@string/clear"
+            android:textColor="@color/blackStart"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/pointBTN"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_digits"
+            android:onClick="pointBTN"
+            android:text="@string/point"
+            android:textColor="@color/tanAccent"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/zeroBTN"
+            app:layout_constraintTop_toBottomOf="@+id/twoBTN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
+
+
