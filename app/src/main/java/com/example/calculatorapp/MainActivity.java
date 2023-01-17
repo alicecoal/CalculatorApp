@@ -83,12 +83,9 @@ public class MainActivity extends AppCompatActivity {
         previousCalculation.setText(userExp);
         userExp = userExp.replaceAll("÷", "/");
         userExp = userExp.replaceAll("×", "*");
-        Expression exp = new Expression(userExp);
-        String pattern ="#.#####";
-        DecimalFormat decimalFormat = new DecimalFormat(pattern);
-        String result = decimalFormat.format(exp.calculate()).replaceAll(",", ".");
-        display.setText(result);
-        display.setSelection(result.length());
+        String res = Utils.solveExpression(userExp);
+        display.setText(res);
+        display.setSelection(res.length());
     }
 
     public void backspace(){
