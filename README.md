@@ -20,3 +20,8 @@
 
 1. После загрузки проекта в его структуре найти app->java->com.example.calculatorapp(test)->UtilsTest.
 2. После выбора файла в контекстном меню найти строку Run "UtilsTest".
+
+Добавлено тестирование ориентации экрана и смены языков:
+
+1. После загрузки проекта в его структуре найти app->java->com.example.calculatorapp(androidTest)->MainActivityTest.
+2. После выбора файла в контекстном меню найти строку Run "MainActivityTest".
